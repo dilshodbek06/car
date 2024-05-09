@@ -1,0 +1,161 @@
+.my-footer {
+  background-color: #545454;
+  min-height: 290px;
+  display: flex;
+  //   align-items: center;
+  //   flex-direction: column;
+  //   justify-content: center;
+  .container-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    .container {
+      padding: 0 10px;
+      width: 100%;
+      max-width: 1190px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      .top {
+        display: flex;
+        gap: 145px;
+        .brand-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          p {
+            font-weight: 500;
+            font-size: 22px;
+            color: #ffffff;
+          }
+        }
+        .desc {
+          color: #ffffff;
+          font-size: 14px;
+          max-width: 286px;
+          width: 100%;
+          margin-top: 16px;
+        }
+        .apps-wrapper {
+          display: flex;
+          gap: 10px;
+          margin-top: 16px;
+          .play-market-btn-footer {
+            width: 110px;
+            height: 39px;
+            border: 1px solid white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 12px 8px 16px;
+            color: white;
+            img {
+              width: 14px;
+              height: 17px;
+            }
+            p {
+              font-size: 7px;
+            }
+            h5 {
+              font-size: 10px;
+              font-weight: 500;
+            }
+          }
+          .app-store-btn-footer {
+            color: white;
+            width: 110px;
+            height: 39px;
+            border: 1px solid white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 12px 8px 16px;
+            img {
+              width: 14px;
+              height: 17px;
+            }
+            p {
+              font-size: 7px;
+            }
+            h5 {
+              font-size: 10px;
+              font-weight: 500;
+            }
+          }
+        }
+        .useful-links-wrapper {
+          color: white;
+          display: flex;
+          gap: 163px;
+          .left-side {
+            display: flex;
+            justify-content: space-between;
+            gap: 116px;
+            .left-tarmoq {
+              width: max-content;
+              p {
+                font-size: 17px;
+                font-weight: 600;
+              }
+              ul {
+                margin-top: 21px;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
+                li {
+                  font-size: 15px;
+                  font-weight: 400;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+          .right-side {
+            .contacts-title {
+              font-weight: 600;
+              font-size: 17px;
+            }
+            .contacts-outer {
+              margin-top: 21px;
+              display: flex;
+              flex-direction: column;
+              gap: 22px;
+              div {
+                display: flex;
+                align-items: center;
+                gap: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      width: 100%;
+      .bottom-container {
+        padding: 0 10px;
+        width: 100%;
+        max-width: 1230px;
+        margin: 0 auto;
+        hr {
+          border: 1px solid #ebebeb;
+        }
+        div {
+          display: flex;
+          justify-content: space-between;
+          color: white;
+          margin-top: 14px;
+          max-width: 1140px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

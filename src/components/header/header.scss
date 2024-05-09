@@ -1,0 +1,185 @@
+$main_bg_color: "#F0F2F3";
+
+@mixin media($max_width) {
+  @media (max-width: $max_width) {
+    @content;
+  }
+}
+// @font-face {
+//   font-family: "Inter";
+//   src: url();
+// }
+
+.my-header {
+  .top-header {
+    height: 88px;
+    width: 100%;
+    background-color: #f0f2f3;
+    display: flex;
+    align-items: center;
+    .container {
+      padding: 0 10px;
+      width: 100%;
+      max-width: 1150px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      .brand-wrapper {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        font-weight: 500;
+        // font-size: 22px;
+        color: #272343;
+        img {
+          width: 45px;
+          height: 38px;
+        }
+      }
+      .input-wrapper {
+        position: relative;
+        input {
+          background-color: white;
+          border-radius: 5px;
+          padding-left: 12px;
+          height: 38px;
+          width: 489px;
+          border: none;
+        }
+        input:focus {
+          outline: none;
+        }
+        input::placeholder {
+          color: #9a9caa;
+        }
+        .search-btn {
+          position: absolute;
+          top: 10px;
+          right: 12px;
+          width: 16px;
+          height: 16px;
+          cursor: pointer;
+        }
+      }
+      .buttons-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        .cart-btn {
+          width: 106px;
+          height: 38px;
+          border-radius: 8px;
+          border: none;
+          background-color: white;
+          display: flex;
+          gap: 18px;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          .cart-inner {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+          .quantity-btn {
+            width: 14px;
+            height: 14px;
+            background-color: #ff5000;
+            border-radius: 50%;
+            color: white;
+            font-weight: 500;
+            font-size: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .like-btn {
+          width: 38px;
+          height: 38px;
+          border-radius: 8px;
+          background-color: white;
+          border: none;
+          cursor: pointer;
+        }
+        .user-btn {
+          width: 38px;
+          height: 38px;
+          border-radius: 8px;
+          background-color: white;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .bottom-header {
+    height: 88px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    .container {
+      padding: 0 10px;
+      width: 100%;
+      max-width: 1024px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      .menus-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        .dropdown-btn {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          border: 1px solid #e1e3e5;
+          padding: 14px 27px 14px 16px;
+          border-radius: 6px;
+          p {
+            font-size: 14px;
+            font-weight: 500;
+            color: #000000;
+          }
+          .dropdown-icon {
+            width: 16px;
+            height: 14px;
+            color: #272343;
+          }
+        }
+        .menu-list {
+          display: flex;
+          gap: 26px;
+          align-items: center;
+          list-style: none;
+          color: #636270;
+          font-weight: 500;
+          font-size: 14px;
+          li {
+            cursor: pointer;
+            transition: all 400ms ease;
+          }
+          li:hover {
+            color: #ff5000;
+          }
+        }
+      }
+      .contact-wrapper {
+        p {
+          color: #636270;
+          font-size: 14px;
+        }
+        span {
+          color: #272343;
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+    }
+    border-bottom: 1px solid #e1e3e5;
+  }
+}
