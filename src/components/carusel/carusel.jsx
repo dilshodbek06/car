@@ -15,6 +15,32 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import { BsArrowRight } from "react-icons/bs";
 
 const Carusel = () => {
+  const itemsData = [
+    {
+      id: 1,
+      imageFile: boxLogo,
+      title: "Chegirmalar",
+      desc: "Har haftada",
+    },
+    {
+      id: 2,
+      imageFile: deliveryLogo,
+      title: "Yetkazib berish",
+      desc: "Xohlagan joyingizga",
+    },
+    {
+      id: 3,
+      imageFile: fullTimeLogo,
+      title: "Support 24/7",
+      desc: "Xohlagan vaqtingizda",
+    },
+    {
+      id: 4,
+      imageFile: safetyLogo,
+      title: "Ishonchli mahsulot",
+      desc: "100% Original",
+    },
+  ];
   return (
     <div className="my-carusel">
       <div className="container">
@@ -77,37 +103,15 @@ const Carusel = () => {
       </div>
       <div className="benefits-bottom">
         <div className="benefits-container">
-          <div className="item">
-            <img src={boxLogo} alt="box" />
-            <div>
-              <h5>Chegirmalar</h5>
-              <p>Har haftada</p>
+          {itemsData?.map((item) => (
+            <div key={item?.id} className="item">
+              <img src={item?.imageFile} alt="box" />
+              <div>
+                <h5>{item?.title}</h5>
+                <p>{item?.desc}</p>
+              </div>
             </div>
-          </div>
-          {/* 2 */}
-          <div className="item">
-            <img src={deliveryLogo} alt="delivery" />
-            <div>
-              <h5>Yetkazib berish</h5>
-              <p>Xohlagan joyingizga</p>
-            </div>
-          </div>
-          {/* 3 */}
-          <div className="item">
-            <img src={fullTimeLogo} alt="full time" />
-            <div>
-              <h5>Support 24/7</h5>
-              <p>Xohlagan vaqtingizda</p>
-            </div>
-          </div>
-          {/* 4 */}
-          <div className="item">
-            <img src={safetyLogo} alt="safety" />
-            <div>
-              <h5>Ishonchli mahsulot</h5>
-              <p>100% Original</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

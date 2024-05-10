@@ -25,6 +25,7 @@ $main_bg_color: "#F0F2F3";
       justify-content: space-between;
       align-items: center;
       margin: 0 auto;
+      gap: 5px;
       .brand-wrapper {
         display: flex;
         gap: 16px;
@@ -39,12 +40,14 @@ $main_bg_color: "#F0F2F3";
       }
       .input-wrapper {
         position: relative;
+        max-width: 489px;
+        width: 100%;
         input {
           background-color: white;
           border-radius: 5px;
           padding-left: 12px;
           height: 38px;
-          width: 489px;
+          width: 100%;
           border: none;
         }
         input:focus {

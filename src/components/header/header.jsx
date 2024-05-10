@@ -44,7 +44,7 @@ const Header = () => {
             <h1 className="">Zap-chast.uz</h1>
           </div>
           <div className="input-wrapper">
-            <input className="" type="text" placeholder="Qidirish..." />
+            <input type="text" placeholder="Qidirish..." />
             <LuSearch className="search-btn" />
           </div>
           <div className="buttons-wrapper">

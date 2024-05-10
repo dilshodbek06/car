@@ -18,8 +18,10 @@
       align-items: center;
       margin: 0 auto;
       .top {
+        width: 100%;
         display: flex;
-        gap: 145px;
+        justify-content: space-between;
+        gap: 5px;
         .brand-wrapper {
           display: flex;
           align-items: center;
@@ -89,11 +91,15 @@
         .useful-links-wrapper {
           color: white;
           display: flex;
-          gap: 163px;
+          justify-content: space-between;
+          width: 70%;
+          gap: 5px;
           .left-side {
             display: flex;
             justify-content: space-between;
-            gap: 116px;
+            gap: 5px;
+            width: 38%;
+
             .left-tarmoq {
               width: max-content;
               p {
