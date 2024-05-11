@@ -23,6 +23,27 @@
           font-weight: 500;
           font-size: 16px;
           text-transform: uppercase;
+          position: relative;
+        }
+        .active {
+          border-bottom: 2px solid rgba(39, 35, 67, 1);
+        }
+        p::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: -2px;
+          left: 0;
+          background-color: rgba(39, 35, 67, 1);
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+
+        p:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
         }
       }
     }
