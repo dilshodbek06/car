@@ -10,7 +10,15 @@ const Product = ({ term = "" }) => {
   return (
     <div className="my-product">
       <div className="card-header">
-        <span>{term}</span>
+        <span
+          style={
+            term === "NEW"
+              ? { color: "rgba(255,80,0,1)" }
+              : { color: "rgba(255,0,0,1)" }
+          }
+        >
+          {term}
+        </span>
         <div className="icons-wrapper">
           <div className="cart-div">
             <img src={addToCartLogo} alt="add to cart" />
