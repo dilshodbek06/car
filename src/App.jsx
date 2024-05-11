@@ -1,7 +1,8 @@
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import OfferApps from "./components/offer-apps/offer-apps.jsx";
 import NotFound from "./pages/404/not-found.jsx";
+import LoadingPage from "./components/loading-page/loading-page.jsx";
 // import pages and components via lazy
 const Header = lazy(() => import("./components/header/header.jsx"));
 const Footer = lazy(() => import("./components/footer/footer.jsx"));
@@ -26,30 +27,33 @@ const ProductDetail = lazy(() =>
 function App() {
   return (
     <div>
-      <Header />
-      <Routes>
-        <Route path="*" element={<NotFound />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/products/filter" element={<ProductsFilter />} />
-        <Route path="/products/new" element={<NewProducts />} />
-        <Route path="/products/new/filter" element={<NewProductsFilter />} />
-        <Route path="/products/discount" element={<ProductsDiscount />} />
-        <Route
-          path="/products/discount/filter"
-          element={<ProductsDiscountFilter />}
-        />
-        <Route
-          path="/products/product-detail/:id"
-          element={<ProductDetail />}
-        />
-      </Routes>
-      <div style={{ marginTop: "100px" }}>
-        <OfferApps />
-      </div>
-      <div style={{ marginTop: "100px" }}>
-        <Footer />
-      </div>
+      <Suspense fallback={<LoadingPage />}>
+        <Header />
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/products/filter" element={<ProductsFilter />} />
+          <Route path="/products/new" element={<NewProducts />} />
+          <Route path="/products/new/filter" element={<NewProductsFilter />} />
+          <Route path="/products/discount" element={<ProductsDiscount />} />
+          <Route
+            path="/products/discount/filter"
+            element={<ProductsDiscountFilter />}
+          />
+
+          <Route
+            path="/products/product-detail/:id"
+            element={<ProductDetail />}
+          />
+        </Routes>
+        <div style={{ marginTop: "100px" }}>
+          <OfferApps />
+        </div>
+        <div style={{ marginTop: "100px" }}>
+          <Footer />
+        </div>
+      </Suspense>
     </div>
   );
 }

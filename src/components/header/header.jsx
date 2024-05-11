@@ -5,8 +5,10 @@ import cartLogo from "../../images/cart.svg";
 import heartLogo from "../../images/heart.svg";
 import userLogo from "../../images/user.svg";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const menus = [
     {
       id: 1,
@@ -26,7 +28,7 @@ const Header = () => {
     {
       id: 4,
       name: "Chegirmalar",
-      url: "/discounts",
+      url: "/products/discount",
     },
     {
       id: 5,
@@ -74,7 +76,7 @@ const Header = () => {
             </div>
             <ul className="menu-list">
               {menus?.map((menu) => (
-                <li key={menu.id} className="">
+                <li onClick={() => navigate(menu?.url)} key={menu.id}>
                   {menu?.name}
                 </li>
               ))}
