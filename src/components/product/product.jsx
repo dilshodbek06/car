@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./product.scss";
 
 import addToCartLogo from "../../images/addToCart.svg";
@@ -5,15 +6,18 @@ import addToWishlistLogo from "../../images/addToWishlist.svg";
 import productImage from "../../images/products/product1.svg";
 import ratingImage from "../../images/products/rating.svg";
 
-const Product = () => {
+const Product = ({ term = "" }) => {
   return (
     <div className="my-product">
       <div className="card-header">
-        <div className="cart-div">
-          <img src={addToCartLogo} alt="add to cart" />
-        </div>
-        <div className="like-div cart-div">
-          <img src={addToWishlistLogo} alt="add to wishlist" />
+        <span>{term}</span>
+        <div className="icons-wrapper">
+          <div className="cart-div">
+            <img src={addToCartLogo} alt="add to cart" />
+          </div>
+          <div className="like-div cart-div">
+            <img src={addToWishlistLogo} alt="add to wishlist" />
+          </div>
         </div>
       </div>
       <div className="card-body">

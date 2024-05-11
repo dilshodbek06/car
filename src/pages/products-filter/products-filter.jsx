@@ -50,6 +50,8 @@ const ProductsFilter = () => {
           <Product />
           <Product />
           <Product />
+          <Product />
+          <Product />
         </div>
       </div>
     </div>

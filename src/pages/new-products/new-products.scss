@@ -1,0 +1,18 @@
+.my-newProducts {
+  margin-top: 100px;
+  .container {
+    padding: 0 10px;
+    max-width: 1150px;
+    margin: 0 auto;
+    .title {
+      font-size: 26px;
+      font-weight: 600;
+    }
+    .products-grid {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 40px;
+    }
+  }
+}

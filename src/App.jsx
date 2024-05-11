@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import OfferApps from "./components/offer-apps/offer-apps.jsx";
+import NotFound from "./pages/404/not-found.jsx";
 // import pages and components via lazy
 const Header = lazy(() => import("./components/header/header.jsx"));
 const Footer = lazy(() => import("./components/footer/footer.jsx"));
@@ -27,6 +28,7 @@ function App() {
     <div>
       <Header />
       <Routes>
+        <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/products/filter" element={<ProductsFilter />} />
