@@ -1,0 +1,109 @@
+.my-product-detail {
+  margin-top: 53px;
+  .container {
+    padding: 0 10px;
+    // width: 100%;
+    max-width: 1150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 40px;
+    .image-wrapper {
+      max-width: 500px;
+      width: 100%;
+      height: 500px;
+      background-color: rgba(240, 242, 243, 1);
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .image-father {
+        max-width: 350px;
+        width: 100%;
+        height: 350px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .details-wrapper {
+      .product-title {
+        font-weight: 500;
+        color: rgba(33, 33, 33, 1);
+        font-size: 36px;
+        max-width: 543px;
+      }
+      .product-desc {
+        font-weight: 300;
+        font-size: 18px;
+        color: rgba(154, 156, 170, 1);
+        max-width: 573px;
+        margin-top: 24px;
+      }
+      .quantity-wrapper {
+        margin-top: 75px;
+        display: flex;
+        align-items: center;
+        button {
+          width: 50px;
+          height: 50px;
+          color: rgba(39, 35, 67, 1);
+          font-size: 24px;
+          border: none;
+          cursor: pointer;
+        }
+        .minus-btn {
+          border-radius: 8px 0 0 8px;
+        }
+        .plus-btn {
+          border-radius: 0 8px 8px 0;
+        }
+        .number {
+          font-size: 24px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 1);
+          padding: 9px 24px 10px 24px;
+          border: 1px solid rgba(240, 242, 243, 1);
+        }
+      }
+      h2 {
+        margin-top: 32px;
+        font-weight: 600;
+        font-size: 40px;
+        color: rgba(0, 0, 0, 1);
+      }
+      .buttons-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 40px;
+        button {
+          border: none;
+          cursor: pointer;
+          font-size: 18px;
+          font-weight: 500;
+          border-radius: 8px;
+        }
+        .add-to-cart-btn {
+          background-color: rgba(255, 80, 0, 1);
+          max-width: 220px;
+          width: 100%;
+          height: 56px;
+          color: rgba(255, 255, 255, 1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 24px;
+        }
+        .buy-btn {
+          max-width: 337px;
+          width: 100%;
+          height: 56px;
+        }
+      }
+    }
+  }
+}
