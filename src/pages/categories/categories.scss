@@ -12,6 +12,9 @@ $tablet_screen: 700px;
   @include media($tablet_screen) {
     margin-top: 20px;
   }
+  @include media(450px) {
+    padding-bottom: 60px;
+  }
   .container {
     padding: 10px 10px;
     max-width: 1150px;

@@ -6,6 +6,7 @@
 
 .my-customAccordion {
   width: 100%;
+
   .accordion {
     max-width: 267px;
     width: 100%;
@@ -68,9 +69,11 @@
   .accordion-content {
     font-size: 14px;
     text-align: justify;
-    padding: 8px 16px;
+    padding: 1px 16px 3px;
     color: #95959a;
-    border-top: 1px solid #43434a;
     background-color: rgba(255, 255, 255, 1);
+    height: 0;
+    overflow: hidden;
+    transition: height 300ms ease;
   }
 }

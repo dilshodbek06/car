@@ -12,6 +12,9 @@ $tablet_screen: 700px;
   @include media($tablet_screen) {
     margin-top: 20px;
   }
+  @include media(450px) {
+    padding-bottom: 70px;
+  }
   .container {
     padding: 10px 10px;
     max-width: 1150px;
@@ -36,6 +39,14 @@ $tablet_screen: 700px;
         margin-top: 16px;
         gap: 15px;
       }
+    }
+  }
+
+  .phone-navigation-father {
+    display: none;
+    margin-top: 15px;
+    @include media(450px) {
+      display: block;
     }
   }
 }

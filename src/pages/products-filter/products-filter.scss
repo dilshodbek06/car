@@ -12,12 +12,15 @@ $tablet_screen: 700px;
   @include media(800px) {
     margin-top: 20px;
   }
+  @include media(450px) {
+    padding-bottom: 70px;
+  }
   .container-products-filter {
     padding: 0 10px;
     max-width: 1150px;
     margin: 0 auto;
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     gap: 20px;
     @include media(800px) {
       flex-direction: column;
@@ -31,7 +34,7 @@ $tablet_screen: 700px;
       border-radius: 20px;
       padding: 24px;
       @include media(800px) {
-        border-radius: 15px;
+        border-radius: 10px 15px 15px;
         max-width: 100%;
         padding: 15px;
         position: sticky;

@@ -1,3 +1,4 @@
+import PhoneNavigation from "../../components/phone-navigation/phone-navigation";
 import PhoneProduct from "../../components/phone-product/phone-product";
 import Product from "../../components/product/product";
 import "./discounts.scss";
@@ -17,6 +18,9 @@ const Discounts = () => {
           <PhoneProduct term="-15%" />
           <PhoneProduct term="-15%" />
         </div>
+      </div>
+      <div className="phone-navigation-father">
+        <PhoneNavigation />
       </div>
     </div>
   );

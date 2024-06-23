@@ -4,19 +4,17 @@ import CustomAccordion from "../../components/custom/customAccordion";
 import Product from "../../components/product/product";
 import PhoneNavigation from "../../components/phone-navigation/phone-navigation";
 import PhoneProduct from "../../components/phone-product/phone-product";
-
 const ProductsFilter = () => {
   return (
     <div className="my-products-filter">
       <div className="container-products-filter">
-        <div className="filter-wrapper">
+        <div className={`filter-wrapper`}>
           <h2>Filter</h2>
           <div className="filters-outer">
             <CustomAccordion index={1} title={"Brendni tanlang"}>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
-                minus.
-              </p>
+              <p>Category 1</p>
+              <p>Category 2</p>
+              <p>Category 3</p>
             </CustomAccordion>
 
             <CustomAccordion index={2} title={"Modelni tanlang"}>

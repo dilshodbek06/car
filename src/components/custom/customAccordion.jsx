@@ -1,10 +1,21 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import "./customAccordion.scss";
+import  { useState, useRef, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import "./customAccordion.scss";
 
 const CustomAccordion = ({ index, title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useEffect(() => {
+    if (isOpen) {
+      setContentHeight(contentRef.current.scrollHeight);
+    } else {
+      setContentHeight(0);
+    }
+  }, [isOpen]);
+
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
@@ -20,19 +31,19 @@ const CustomAccordion = ({ index, title, children }) => {
             <p>{index}</p>
             <p>{title}</p>
           </div>
-
           <span
             className={`material-symbols-outlined ${isOpen ? "active" : ""}`}
           >
             <IoIosArrowDown />
           </span>
         </div>
-
-        {isOpen && (
-          <div className="accordion-content">
-            <p>{children}</p>
-          </div>
-        )}
+        <div
+          className="accordion-content"
+          style={{ height: `${contentHeight}px` }}
+          ref={contentRef}
+        >
+          <div>{children}</div>
+        </div>
       </div>
     </div>
   );

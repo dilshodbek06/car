@@ -8,7 +8,9 @@ $tablet_screen: 700px;
 }
 
 .my-home {
-  // padding: 0 8px;
+  @include media(450px) {
+    padding-bottom: 70px;
+  }
   .top-products-father {
     @include media($tablet_screen) {
       margin-top: 20px !important;
