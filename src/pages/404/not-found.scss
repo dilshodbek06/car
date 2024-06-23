@@ -1,8 +1,17 @@
+@mixin media($max_width) {
+  @media (max-width: $max_width) {
+    @content;
+  }
+}
+
 .my-not-found {
   .page_404 {
     padding: 40px 0;
     background: #fff;
     font-family: "Arvo", serif;
+    @include media(450px) {
+      padding: 0;
+    }
   }
 
   .page_404 img {
@@ -14,6 +23,10 @@
     height: 650px;
     background-position: center;
     background-repeat: no-repeat;
+    @include media(450px) {
+      height: 580px;
+      scale: 0.8;
+    }
   }
 
   .four_zero_four_bg h1 {
@@ -22,16 +35,5 @@
 
   .four_zero_four_bg h3 {
     font-size: 80px;
-  }
-
-  .link_404 {
-    color: #fff !important;
-    padding: 10px 20px;
-    background: #39ac31;
-    margin: 20px 0;
-    display: inline-block;
-  }
-  .contant_box_404 {
-    margin-top: -50px;
   }
 }

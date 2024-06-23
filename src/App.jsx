@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import OfferApps from "./components/offer-apps/offer-apps.jsx";
 import NotFound from "./pages/404/not-found.jsx";
 import LoadingPage from "./components/loading-page/loading-page.jsx";
+
 // import pages and components via lazy
 const Header = lazy(() => import("./components/header/header.jsx"));
 const Footer = lazy(() => import("./components/footer/footer.jsx"));
@@ -47,10 +48,10 @@ function App() {
             element={<ProductDetail />}
           />
         </Routes>
-        <div style={{ marginTop: "100px" }}>
+        <div className="offer-apps-father" style={{ marginTop: "100px" }}>
           <OfferApps />
         </div>
-        <div style={{ marginTop: "100px" }}>
+        <div className="footer-father">
           <Footer />
         </div>
       </Suspense>

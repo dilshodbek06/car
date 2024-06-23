@@ -2,11 +2,13 @@ import { IoCloseSharp, IoSearch } from "react-icons/io5";
 import "./products-filter.scss";
 import CustomAccordion from "../../components/custom/customAccordion";
 import Product from "../../components/product/product";
+import PhoneNavigation from "../../components/phone-navigation/phone-navigation";
+import PhoneProduct from "../../components/phone-product/phone-product";
 
 const ProductsFilter = () => {
   return (
     <div className="my-products-filter">
-      <div className="container">
+      <div className="container-products-filter">
         <div className="filter-wrapper">
           <h2>Filter</h2>
           <div className="filters-outer">
@@ -52,7 +54,17 @@ const ProductsFilter = () => {
           <Product />
           <Product />
           <Product />
+          <PhoneProduct term="NEW" />
+          <PhoneProduct term="NEW" />
+          <PhoneProduct term="NEW" />
+          <PhoneProduct term="NEW" />
+          <PhoneProduct term="NEW" />
+          <PhoneProduct term="NEW" />
+          <PhoneProduct term="NEW" />
         </div>
+      </div>
+      <div className="phone-navigation-father">
+        <PhoneNavigation />
       </div>
     </div>
   );

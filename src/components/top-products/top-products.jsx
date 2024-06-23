@@ -1,5 +1,6 @@
 import "./top-products.scss";
 import Product from "../product/product";
+import PhoneProduct from "../phone-product/phone-product";
 
 const TopProducts = () => {
   return (
@@ -7,6 +8,7 @@ const TopProducts = () => {
       <div className="container">
         <div className="title-wrapper">
           <h1>Top Mahsulotlar</h1>
+          <p>Hammasi</p>
         </div>
         <div className="products-grid">
           <Product />
@@ -17,6 +19,10 @@ const TopProducts = () => {
           <Product />
           <Product />
           <Product />
+          <PhoneProduct term="NEW" />
+          <PhoneProduct term="NEW" />
+          <PhoneProduct term="NEW" />
+          <PhoneProduct term="NEW" />
         </div>
         <div className="more-wrapper">
           <button>Ko’proq ko’rish</button>

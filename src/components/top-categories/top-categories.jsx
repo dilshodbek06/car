@@ -8,6 +8,7 @@ const TopCategories = () => {
       <div className="container">
         <div className="title-wrapper">
           <h1>Top Kategoriyalar</h1>
+          <p>Hammasi</p>
         </div>
         <div className="categories-grid">
           <Category />

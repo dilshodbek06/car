@@ -1,7 +1,18 @@
+$phone_screen: 375px;
+$tablet_screen: 700px;
+
+@mixin media($max_width) {
+  @media (max-width: $max_width) {
+    @content;
+  }
+}
+
 .my-footer {
   background-color: #545454;
   min-height: 290px;
   display: flex;
+  padding-bottom: 15px;
+
   .container-wrapper {
     width: 100%;
     display: flex;
@@ -9,6 +20,9 @@
     align-items: center;
     justify-content: center;
     gap: 28px;
+    @include media(1030px) {
+      padding-top: 40px;
+    }
     .container {
       padding: 0 10px;
       width: 100%;
@@ -22,6 +36,10 @@
         display: flex;
         justify-content: space-between;
         gap: 5px;
+        @include media(1030px) {
+          flex-direction: column;
+          gap: 20px;
+        }
         .brand-wrapper {
           display: flex;
           align-items: center;
@@ -94,12 +112,22 @@
           justify-content: space-between;
           width: 70%;
           gap: 5px;
+
+          @include media(1030px) {
+            width: 100%;
+          }
+          @include media(550px) {
+            flex-direction: column;
+            gap: 20px;
+          }
           .left-side {
             display: flex;
             justify-content: space-between;
             gap: 5px;
             width: 38%;
-
+            @include media(550px) {
+              width: 65%;
+            }
             .left-tarmoq {
               width: max-content;
               p {

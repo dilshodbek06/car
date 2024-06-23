@@ -45,61 +45,63 @@ const Carusel = () => {
     <div className="my-carusel">
       <div className="container">
         <div className="back-shape"></div>
-        <Swiper
-          cssMode={true}
-          navigation={true}
-          pagination={true}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <div className="content-wrapper">
-              <div className="left">
-                <p>Assalomu alaykum!</p>
-                <h1>Mashinangiz Uchun eng Yaxshi Tanlov.</h1>
-                <button className="buy-btn">
-                  <span>Sotib olish</span>
-                  <BsArrowRight className="right-icon" />
-                </button>
+        <div className="test">
+          <Swiper
+            cssMode={true}
+            navigation={true}
+            pagination={true}
+            mousewheel={true}
+            keyboard={true}
+            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="content-wrapper">
+                <div className="left">
+                  <p>Assalomu alaykum!</p>
+                  <h1>Mashinangiz Uchun eng Yaxshi Tanlov.</h1>
+                  <button className="buy-btn">
+                    <span>Sotib olish</span>
+                    <BsArrowRight className="right-icon" />
+                  </button>
+                </div>
+                <div className="right">
+                  <img src={reklamaLogo} alt="slider image" />
+                </div>
               </div>
-              <div className="right">
-                <img src={reklamaLogo} alt="slider image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="content-wrapper">
+                <div className="left">
+                  <p>Assalomu alaykum!</p>
+                  <h1>Mashinangiz Uchun eng Yaxshi Tanlov.</h1>
+                  <button className="buy-btn">
+                    <span>Sotib olish</span>
+                    <BsArrowRight className="right-icon" />
+                  </button>
+                </div>
+                <div className="right">
+                  <img src={reklamaLogo} alt="slider image" />
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="content-wrapper">
-              <div className="left">
-                <p>Assalomu alaykum!</p>
-                <h1>Mashinangiz Uchun eng Yaxshi Tanlov.</h1>
-                <button className="buy-btn">
-                  <span>Sotib olish</span>
-                  <BsArrowRight className="right-icon" />
-                </button>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="content-wrapper">
+                <div className="left">
+                  <p>Assalomu alaykum!</p>
+                  <h1>Mashinangiz Uchun eng Yaxshi Tanlov.</h1>
+                  <button className="buy-btn">
+                    <span>Sotib olish</span>
+                    <BsArrowRight className="right-icon" />
+                  </button>
+                </div>
+                <div className="right">
+                  <img src={reklamaLogo} alt="slider image" />
+                </div>
               </div>
-              <div className="right">
-                <img src={reklamaLogo} alt="slider image" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="content-wrapper">
-              <div className="left">
-                <p>Assalomu alaykum!</p>
-                <h1>Mashinangiz Uchun eng Yaxshi Tanlov.</h1>
-                <button className="buy-btn">
-                  <span>Sotib olish</span>
-                  <BsArrowRight className="right-icon" />
-                </button>
-              </div>
-              <div className="right">
-                <img src={reklamaLogo} alt="slider image" />
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
       <div className="benefits-bottom">
         <div className="benefits-container">

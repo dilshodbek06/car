@@ -1,4 +1,5 @@
 import Category from "../../components/category/category";
+import PhoneNavigation from "../../components/phone-navigation/phone-navigation";
 import "./categories.scss";
 
 const Categories = () => {
@@ -13,6 +14,9 @@ const Categories = () => {
           <Category />
           <Category />
         </div>
+      </div>
+      <div className="phone-navigation-father">
+        <PhoneNavigation />
       </div>
     </div>
   );

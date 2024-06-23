@@ -18,8 +18,8 @@ const ProductDetail = () => {
           </h1>
           <p className="product-desc">
             Mahsulot har qanday iqlim sharoitida elastiklikni saqlab, sovuqqa
-            chidamliligini oshiradi. O'rnatish qulflari yukni teng taqsimlash
-            uchun qopqoqning butun perimetri bo'ylab joylashgan.
+            chidamliligini oshiradi. O`rnatish qulflari yukni teng taqsimlash
+            uchun qopqoqning butun perimetri bo`ylab joylashgan.
           </p>
           <div className="quantity-wrapper">
             <button className="minus-btn">-</button>

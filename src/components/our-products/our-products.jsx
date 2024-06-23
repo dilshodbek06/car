@@ -1,4 +1,5 @@
 import Product from "../product/product";
+import PhoneProduct from "../phone-product/phone-product";
 import "./our-products.scss";
 
 const OurProducts = () => {
@@ -19,6 +20,10 @@ const OurProducts = () => {
           <Product />
           <Product />
           <Product />
+          <PhoneProduct term="-15%" />
+          <PhoneProduct term="-15%" />
+          <PhoneProduct term="-15%" />
+          <PhoneProduct term="-15%" />
         </div>
         <div className="more-wrapper">
           <button>Ko’proq ko’rish</button>

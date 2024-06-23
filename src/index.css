@@ -10,3 +10,12 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
+@media (max-width: 450px) {
+  .footer-father {
+    display: none;
+  }
+  .offer-apps-father {
+    display: none;
+  }
+}

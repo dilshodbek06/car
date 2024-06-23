@@ -4,11 +4,13 @@ import brandLogo from "../../images/brand.svg";
 import cartLogo from "../../images/cart.svg";
 import heartLogo from "../../images/heart.svg";
 import userLogo from "../../images/user.svg";
+import notificationLogo from "../../images/notification.svg";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const menus = [
     {
       id: 1,
@@ -33,7 +35,7 @@ const Header = () => {
     {
       id: 5,
       name: "Ijtimoiy tarmoq",
-      url: "/",
+      url: "/test",
     },
   ];
   return (
@@ -41,7 +43,7 @@ const Header = () => {
       {/* top */}
       <div className="top-header">
         <div className="container">
-          <div className="brand-wrapper">
+          <div onClick={() => navigate("/")} className="brand-wrapper">
             <img className="" src={brandLogo} alt="brand logo" />
             <h1 className="">Zap-chast.uz</h1>
           </div>
@@ -63,8 +65,15 @@ const Header = () => {
             <button className="user-btn">
               <img className="" src={userLogo} alt="user icon" />
             </button>
+            <div className="notification-btn">
+              <img src={notificationLogo} alt="notification" />
+            </div>
           </div>
         </div>
+      </div>
+      <div className="phone-screen-input">
+        <input type="text" placeholder="Qidirish..." />
+        <LuSearch className="search-btn" />
       </div>
       {/* bottom */}
       <div className="bottom-header">
@@ -76,7 +85,11 @@ const Header = () => {
             </div>
             <ul className="menu-list">
               {menus?.map((menu) => (
-                <li onClick={() => navigate(menu?.url)} key={menu.id}>
+                <li
+                  className={`${location.pathname === menu?.url && "active"}`}
+                  onClick={() => navigate(menu?.url)}
+                  key={menu.id}
+                >
                   {menu?.name}
                 </li>
               ))}
