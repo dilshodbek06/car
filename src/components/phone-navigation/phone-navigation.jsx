@@ -9,6 +9,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 const PhoneNavigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  
   const menus = [
     {
       id: 1,
@@ -45,7 +46,7 @@ const PhoneNavigation = () => {
     {
       id: 4,
       name: "Избранное",
-      url: "/wishlist",
+      url: "/products/filter", // wishlist
       icon: (
         <FaRegHeart
           className={`icon ${
@@ -65,6 +66,7 @@ const PhoneNavigation = () => {
       ),
     },
   ];
+
   return (
     <div className="my-phone-navigation">
       <div className="container">

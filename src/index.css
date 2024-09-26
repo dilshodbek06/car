@@ -11,6 +11,10 @@
   font-family: "Inter", sans-serif;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @media (max-width: 450px) {
   .footer-father {
     display: none;

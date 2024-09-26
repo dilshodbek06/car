@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import OfferApps from "./components/offer-apps/offer-apps.jsx";
 import NotFound from "./pages/404/not-found.jsx";
 import LoadingPage from "./components/loading-page/loading-page.jsx";
@@ -25,11 +25,22 @@ const ProductDetail = lazy(() =>
   import("./pages/product-detail/product-detail.jsx")
 );
 
+// admin imports
+const AdminPage = lazy(() => import("./pages/admin/admin.jsx"));
+const AdminCategoriesPage = lazy(() =>
+  import("./pages/admin/categories/categories.jsx")
+);
+const AdminProductsPage = lazy(() =>
+  import("./pages/admin/products/products.jsx")
+);
+
 function App() {
+  const location = useLocation();
+
   return (
     <div>
       <Suspense fallback={<LoadingPage />}>
-        <Header />
+        {!location.pathname.includes("/admin") && <Header />}
         <Routes>
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
@@ -47,13 +58,21 @@ function App() {
             path="/products/product-detail/:id"
             element={<ProductDetail />}
           />
+          <Route path="/admin" element={<AdminPage />}>
+            <Route path="/admin/categories" element={<AdminCategoriesPage />} />
+            <Route path="/admin/products" element={<AdminProductsPage />} />
+          </Route>
         </Routes>
-        <div className="offer-apps-father" style={{ marginTop: "100px" }}>
-          <OfferApps />
-        </div>
-        <div className="footer-father">
-          <Footer />
-        </div>
+        {!location.pathname.includes("/admin") && (
+          <div className="offer-apps-father" style={{ marginTop: "100px" }}>
+            <OfferApps />
+          </div>
+        )}
+        {!location.pathname.includes("/admin") && (
+          <div className="footer-father">
+            <Footer />
+          </div>
+        )}
       </Suspense>
     </div>
   );
